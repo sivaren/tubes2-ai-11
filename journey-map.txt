@@ -1,0 +1,55 @@
+(load main.clp)
+(reset)
+(run)
+
+; then, choose one of choices below to get prediction result (=> <result_prediction>)
+; later, put down the commands
+
+=> Hepatitis B+D
+positive
+positive
+
+=> Uncertain configuration 1
+positive
+negative
+negative
+
+=> Uncertain configuration 2
+positive
+negative
+positive
+positive
+
+=> Acute Infection 
+positive
+negative
+positive
+negative
+positive
+
+=> Chronic Infection 
+positive
+negative
+positive
+negative
+negative
+
+=> Cured
+negative
+positive
+positive
+
+=> Vaccinated
+negative
+positive
+negative
+
+=> Unclear (possible resolved)
+negative
+negative
+positive
+
+=> Healthy not vaccinated or suspicious
+negative
+negative
+positive

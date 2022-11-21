@@ -121,7 +121,7 @@
     =>
     (printout t crlf "Hasil Prediksi = Unclear (possible resolved)" crlf))
 
-;; Termination Unclear Healthy not vaccinated or suspicious
+;; Termination Healthy not vaccinated or suspicious
 (defrule predict-Healthy
     (hbsag negative) 
     (anti-hbs negative)
@@ -129,3 +129,17 @@
     =>
     (printout t crlf "Hasil Prediksi = Healthy not vaccinated or suspicious" crlf))
 ; END OF RIGHT-ROOT
+; ------------------------------
+; START OF INVALID INPUT CONTROL
+(defrule invalidInput
+    (or 
+        (hbsag ~positive&~negative) 
+        (anti-hdv ~positive&~negative)
+        (anti-hbc ~positive&~negative)
+        (anti-hbs ~positive&~negative)
+        (igm-anti-hbc ~positive&~negative)
+    ) 
+    =>
+    (printout t crlf "[ERROR] Invalid input!" crlf)
+    (printout t "[MESSAGE] You can only put either 'positive' or 'negative' input." crlf))
+; END OF INVALID INPUT CONTROL

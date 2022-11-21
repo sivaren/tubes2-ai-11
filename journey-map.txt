@@ -52,4 +52,4 @@ positive
 => Healthy not vaccinated or suspicious
 negative
 negative
-positive
+negative
